@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HomeWorks
+namespace HomeWorks.week02
 {
     internal class loop_task1
     {
@@ -63,7 +63,7 @@ namespace HomeWorks
                 {
                     temp1 /= 2;
                 }
-                temp_bool = (temp1 == 1);
+                temp_bool = temp1 == 1;
 
                 if (temp_bool)
                 {
