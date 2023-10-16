@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2_array", "week02\Task2
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task1_loop", "week02\Task1_loop\Task1_loop.csproj", "{4B5FF82F-BFB9-4843-909E-709BFB9FAD70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4_Algorithms", "week02\Task4_Algorithms\Task4_Algorithms.csproj", "{C0D1ABFF-1949-460F-B15D-E3A80FC9821D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task4_Algorithms", "week02\Task4_Algorithms\Task4_Algorithms.csproj", "{C0D1ABFF-1949-460F-B15D-E3A80FC9821D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1_ConsoleApps-Loops", "week03\Task1_ConsoleApps-Loops\Task1_ConsoleApps-Loops.csproj", "{2D7B429C-24C3-4746-AB49-3105068EBE12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C0D1ABFF-1949-460F-B15D-E3A80FC9821D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0D1ABFF-1949-460F-B15D-E3A80FC9821D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0D1ABFF-1949-460F-B15D-E3A80FC9821D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D7B429C-24C3-4746-AB49-3105068EBE12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7B429C-24C3-4746-AB49-3105068EBE12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D7B429C-24C3-4746-AB49-3105068EBE12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D7B429C-24C3-4746-AB49-3105068EBE12}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
