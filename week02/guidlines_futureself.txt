@@ -1,0 +1,73 @@
+////
+//int[] arr1 = { 1,3,55,7,9,3,5,0,0,3,7,5};
+////
+//int leng = arr1.Length;
+//int[] arr2 = new int[leng];
+//int[] arr3 = new int[leng];
+//bool isHere;
+//int count = 0;
+//int index = 0;
+
+//for (int i = 0; i < leng; i++)
+//{
+//	isHere = false;
+
+//	for (int j = 0; j < count; j++)
+//	{
+//		if (arr1[i] == arr3[j])
+//		{
+//			isHere = true;
+//			index = j;
+//			break;
+//		}
+//	}
+
+//	if (!isHere)
+//	{
+//		arr2[count] = 1;
+//		arr3[count] = arr1[i];
+//		count++;
+//	}
+//	else
+//	{
+//		arr2[index] = arr2[index] + 1;
+//	}
+//}
+
+//for (int i = 0; i < count; i++)
+//{
+//	Console.WriteLine(arr3[i] + " bu qederdir: " + arr2[i]);
+//}
+
+
+
+
+int input = 0;
+string sinput = "";
+string warning = "Give me proper length of array(x<10): ";
+do
+{
+	Console.Write(warning);
+	sinput = Console.ReadLine();
+	input = Convert.ToInt32(sinput);
+	warning = "I SAID PROPER LENGTH (X<10): ";
+} while (input > 9);
+
+int[] array = new int[input];
+
+Console.Write("Would you like to fill array?(y/): ");
+sinput = Console.ReadLine();
+
+if (sinput == "Y")
+{
+	for (int i = 0; i < input; i++)
+	{
+		Console.Write("["+i+"]: ");
+		array[i] = Convert.ToInt32(Console.ReadLine());
+	}
+
+	for (int i = 0; i < input; i++)
+	{
+		Console.Write(array[i] + ",");
+	}
+}
