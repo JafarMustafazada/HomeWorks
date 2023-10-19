@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task1_ConsoleApps-Loops", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task2_Methods", "week03\Task2_Methods\Task2_Methods.csproj", "{59F6F59E-0B7E-43E2-8BE0-F0F5A50684D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task3_ValueAndRef", "week03\Task3_ValueAndRef\Task3_ValueAndRef.csproj", "{CC730ADB-EA2D-42C9-B882-39F17DFBC801}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task3_ValueAndRef", "week03\Task3_ValueAndRef\Task3_ValueAndRef.csproj", "{CC730ADB-EA2D-42C9-B882-39F17DFBC801}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task4_Class", "week03\Task4_Class\Task4_Class.csproj", "{A3920792-E371-464D-B5B3-288EFD6B8EB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{CC730ADB-EA2D-42C9-B882-39F17DFBC801}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC730ADB-EA2D-42C9-B882-39F17DFBC801}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC730ADB-EA2D-42C9-B882-39F17DFBC801}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3920792-E371-464D-B5B3-288EFD6B8EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3920792-E371-464D-B5B3-288EFD6B8EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3920792-E371-464D-B5B3-288EFD6B8EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3920792-E371-464D-B5B3-288EFD6B8EB9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
