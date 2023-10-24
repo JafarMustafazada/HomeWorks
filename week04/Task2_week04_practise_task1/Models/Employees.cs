@@ -150,7 +150,7 @@ namespace Task2_week04_practise_task1.Models
             int index = this.GetUserInt(user);
             if (index >= 0)
             {
-                return this._employees[index];
+                return new Employee(this._employees[index].Name, this._employees[index].Surname, this._employees[index].Age);
             }
             else
             {
@@ -187,14 +187,17 @@ namespace Task2_week04_practise_task1.Models
                     switch (input)
                     {
                         case "1":
+                            Console.Write("New Name: ");
                             this._employees[index].Name = Console.ReadLine();
                             isInterface = false;
                             break;
                         case "2":
+                            Console.Write("New Surname: ");
                             this._employees[index].Surname = Console.ReadLine();
                             isInterface = false;
                             break;
                         case "3":
+                            Console.Write("New Age: ");
                             input = Console.ReadLine();
                             this._employees[index].Age = Convert.ToByte(input);
                             isInterface = false;
