@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Task4_Class", "week03\Task4
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task1_AccessModifiers", "week04\Task1_AccessModifiers\Task1_AccessModifiers.csproj", "{5976A669-0F4E-4A75-84A6-66EB3CEA35DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task2_week04_practise_task1", "week04\Task2_week04_practise_task1\Task2_week04_practise_task1.csproj", "{B41A9801-F1B6-4B6E-B254-3096379A8BA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{5976A669-0F4E-4A75-84A6-66EB3CEA35DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5976A669-0F4E-4A75-84A6-66EB3CEA35DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5976A669-0F4E-4A75-84A6-66EB3CEA35DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B41A9801-F1B6-4B6E-B254-3096379A8BA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41A9801-F1B6-4B6E-B254-3096379A8BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41A9801-F1B6-4B6E-B254-3096379A8BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41A9801-F1B6-4B6E-B254-3096379A8BA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
