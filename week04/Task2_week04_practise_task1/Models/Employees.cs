@@ -16,34 +16,38 @@ namespace Task2_week04_practise_task1.Models
             get => _username;
             set
             {
-                if (value == "update")
+                if (value == "update" && this._flags == 3) // 011 = 3
                 {
                     this._username = this.Name + "_" + this.Surname;
+                }
+                else
+                {
+                    this._username = "none";
                 }
             }
         }
         public string Name
         {
-            get { return _name; }
+            get => _name; 
             set
             {
                 if (!(String.IsNullOrWhiteSpace(value)))
                 {
                     value = value.Trim();
-                    this._name = value.ToUpper()[0] + value.Substring(1);
+                    this._name = Char.ToUpper(value[0]) + value.Substring(1);
                     this._flags |= 1; // 001
                 }
             }
         }
         public string Surname
         {
-            get { return _surname; }
+            get => _surname;
             set
             {
                 if (!(String.IsNullOrWhiteSpace(value)))
                 {
                     value = value.Trim();
-                    this._surname = value.ToUpper()[0] + value.Substring(1);
+                    this._surname = Char.ToUpper(value[0]) + value.Substring(1);
                     this._flags |= 2; // 010
                 }
             }
@@ -53,14 +57,8 @@ namespace Task2_week04_practise_task1.Models
             get => this._age;
             set
             {
-                if (value > 0)
-                {
-                    this._age = value;
-                }
-                else
-                {
-                    this._age = 1;
-                }
+                if (value > 0) this._age = value;
+                else this._age = 1;
             }
         }
 
@@ -69,11 +67,13 @@ namespace Task2_week04_practise_task1.Models
             this.Name = Name;
             this.Surname = Surname;
             this.Age = Age;
+            this.Username = "update";
+            
+        }
 
-            if (this._flags == 3) // 011
-            {
-                this.Username = "update";
-            }
+        public override string ToString()
+        {
+            return this.Username + " at age " + this.Age;
         }
     }
     public class Company
@@ -85,10 +85,13 @@ namespace Task2_week04_practise_task1.Models
 
         public Company(string CompanyName)
         {
-            if (!String.IsNullOrWhiteSpace(CompanyName))
+            if (String.IsNullOrWhiteSpace(CompanyName))
             {
-                this._companyName = CompanyName;
+                this._companyName = "none";
             }
+            else this._companyName = CompanyName;
+
+            this._employees = new Employee[0];
         }
 
         public void AddUser(Employee user)
@@ -127,7 +130,7 @@ namespace Task2_week04_practise_task1.Models
             }
             else
             {
-                Console.WriteLine("Not founded.");
+                Console.WriteLine(user + " Not founded.");
             }
         }
         public int GetUserInt(string user)
@@ -152,10 +155,8 @@ namespace Task2_week04_practise_task1.Models
             {
                 return new Employee(this._employees[index].Name, this._employees[index].Surname, this._employees[index].Age);
             }
-            else
-            {
-                Console.WriteLine("Not founded.");
-            }
+
+            Console.WriteLine(user + " Not founded.");
             return null;
         }
         public Employee[] GetAllUsers()
@@ -172,7 +173,7 @@ namespace Task2_week04_practise_task1.Models
         public void UpdateUser(string user)
         {
             int index = this.GetUserInt(user);
-            bool isInterface = true;
+            bool isInterface;
             if (index >= 0)
             {
                 do
@@ -180,38 +181,35 @@ namespace Task2_week04_practise_task1.Models
                     Console.WriteLine("1. Update Name");
                     Console.WriteLine("2. Update Surame");
                     Console.WriteLine("3. Update Age");
-                    Console.WriteLine("0. None.");
+                    Console.WriteLine("4. None");
                     Console.Write("What would you like?(numbers of action): ");
                     string input = Console.ReadLine();
+                    isInterface = false;
 
                     switch (input)
                     {
                         case "1":
                             Console.Write("New Name: ");
                             this._employees[index].Name = Console.ReadLine();
-                            isInterface = false;
                             break;
                         case "2":
                             Console.Write("New Surname: ");
                             this._employees[index].Surname = Console.ReadLine();
-                            isInterface = false;
                             break;
                         case "3":
                             Console.Write("New Age: ");
                             input = Console.ReadLine();
                             this._employees[index].Age = Convert.ToByte(input);
-                            isInterface = false;
                             break;
-                        case "0":
-                            isInterface = false;
+                        case "4":
                             break;
                         default:
                             Console.WriteLine("Try again.");
+                            isInterface = true;
                             break;
                     }
-
-                    this._employees[index].Username = "update";
                 } while (isInterface);
+                this._employees[index].Username = "update";
             }
         }
     }
