@@ -68,7 +68,6 @@ namespace Task2_week04_practise_task1.Models
             this.Surname = Surname;
             this.Age = Age;
             this.Username = "update";
-            
         }
 
         public override string ToString()
@@ -85,18 +84,19 @@ namespace Task2_week04_practise_task1.Models
 
         public Company(string CompanyName)
         {
-            if (String.IsNullOrWhiteSpace(CompanyName))
-            {
-                this._companyName = "none";
-            }
-            else this._companyName = CompanyName;
-
+            this._companyName = CompanyName;
             this._employees = new Employee[0];
+        }
+
+        public override string ToString()
+        {
+            return this._companyName;
         }
 
         public void AddUser(Employee user)
         {
             Employee[] newArray = new Employee[this._length + 1];
+
             for (int i = 0; i < this._length; i++)
             {
                 newArray[i] = this._employees[i];
@@ -210,6 +210,10 @@ namespace Task2_week04_practise_task1.Models
                     }
                 } while (isInterface);
                 this._employees[index].Username = "update";
+            }
+            else
+            {
+                Console.WriteLine(user + " Not founded.");
             }
         }
     }
