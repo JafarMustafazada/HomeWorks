@@ -24,31 +24,46 @@ internal class Program
             Console.WriteLine("4. List all vehicles");
             Console.WriteLine("5. Delete vehicle by index");
             Console.Write("What will be your choose mr.Wayne?: ");
-            string sinput = Console.ReadLine();
+            byte BInput;
+            int IInput;
+            float FInput;
             flags = 0;
             Vehicle vehicle = null;
 
-            switch (sinput)
+            switch (Console.ReadLine())
             {
                 case "1":
                     flags |= 1;
                     flags |= 2;
                     vehicle = new Car();
+
+                    Console.Write("Door count: ");
+                    Byte.TryParse(Console.ReadLine(), out BInput);
+                    (vehicle as Car).DoorCount = BInput;
+
+                    Console.Write("Win code: ");
+                    (vehicle as Car).WinCode = Console.ReadLine();
                     break;
                 case "2":
                     flags |= 1;
                     flags |= 4;
                     vehicle = new Bicycle();
+
+                    Console.Write("Pedal kind: ");
+                    (vehicle as Bicycle).PedalKind = Console.ReadLine();
                     break;
                 case "3":
                     flags |= 2;
                     vehicle = new Plane();
+
+                    Console.Write("Wing length: ");
+                    float.TryParse(Console.ReadLine(), out FInput);
+                    (vehicle as Plane).WingLength = FInput;
                     break;
                 case "4":
-                    Console.WriteLine("List:");
                     for (int i = 0; i < vehicles.Length; i++)
                     {
-                        Console.WriteLine("\t[" + i + "]: " + vehicles[i]);
+                        Console.WriteLine("\n[" + i + "]: " + vehicles[i]);
                     }
                     break;
                 case "5":
@@ -79,8 +94,13 @@ internal class Program
 
             if (flags > 0)
             {
-                int IInput;
-                float FInput;
+                Console.Write("Meters drived: ");
+                float.TryParse(Console.ReadLine(), out FInput);
+                vehicle.DrivePath = FInput;
+
+                Console.Write("Seconds it taked: ");
+                Int32.TryParse(Console.ReadLine(), out IInput);
+                vehicle.DriveTime = IInput;
 
                 if ((flags & 1) > 0)
                 {
